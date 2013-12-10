@@ -1,0 +1,23 @@
+Oct 05 13:22:56  [info] $backTrace = #0 /home/wordpress/public_html/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(229): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 [internal function](): CRM_Core_Error::simpleHandler(Object(DB_Error))
+#2 /home/wordpress/public_html/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(931): call_user_func((Array:2), Object(DB_Error))
+#3 /home/wordpress/public_html/wp-content/plugins/civicrm/civicrm/packages/DB.php(969): PEAR_Error->PEAR_Error("DB Error: connect failed", -24, 16, (Array:2), " [nativecode=mysql_connect(): Can't connect to local MySQL server through soc...")
+#4 /home/wordpress/public_html/wp-content/plugins/civicrm/civicrm/packages/PEAR.php(564): DB_Error->DB_Error(-24, 16, (Array:2), " [nativecode=mysql_connect(): Can't connect to local MySQL server through soc...")
+#5 /home/wordpress/public_html/wp-content/plugins/civicrm/civicrm/packages/DB/common.php(1905): PEAR->raiseError(NULL, -24, NULL, NULL, " [nativecode=mysql_connect(): Can't connect to local MySQL server through soc...", "DB_Error", TRUE)
+#6 /home/wordpress/public_html/wp-content/plugins/civicrm/civicrm/packages/DB/mysql.php(256): DB_common->raiseError(-24, NULL, NULL, NULL, "mysql_connect(): Can't connect to local MySQL server through socket '/var/run...")
+#7 /home/wordpress/public_html/wp-content/plugins/civicrm/civicrm/packages/DB.php(559): DB_mysql->connect((Array:10), FALSE)
+#8 /home/wordpress/public_html/wp-content/plugins/civicrm/civicrm/packages/DB/DataObject.php(2294): DB::connect((string))
+#9 /home/wordpress/public_html/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(198): DB_DataObject->_connect()
+#10 /home/wordpress/public_html/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO.php(77): CRM_Core_DAO->initialize()
+#11 /home/wordpress/public_html/wp-content/plugins/civicrm/civicrm/CRM/Core/DAO/Domain.php(140): CRM_Core_DAO->__construct()
+#12 /home/wordpress/public_html/wp-content/plugins/civicrm/civicrm/CRM/Core/BAO/ConfigSetting.php(205): CRM_Core_DAO_Domain->__construct()
+#13 /home/wordpress/public_html/wp-content/plugins/civicrm/civicrm/CRM/Core/Config.php(408): CRM_Core_BAO_ConfigSetting::retrieve((Array:0))
+#14 /home/wordpress/public_html/wp-content/plugins/civicrm/civicrm/CRM/Core/Config.php(196): CRM_Core_Config->_initVariables()
+#15 /home/wordpress/public_html/wp-content/plugins/civicrm/civicrm.php(242): CRM_Core_Config::singleton()
+#16 /home/wordpress/public_html/wp-content/plugins/civicrm/civicrm.php(299): civicrm_initialize()
+#17 [internal function](): civicrm_wp_invoke("")
+#18 /home/wordpress/public_html/wp-includes/plugin.php(406): call_user_func_array("civicrm_wp_invoke", (Array:1))
+#19 /home/wordpress/public_html/wp-admin/admin.php(149): do_action("toplevel_page_CiviCRM")
+#20 {main}
+
+
